@@ -1,0 +1,8 @@
+    <form action="{% url 'cart_view' %}" method="POST">
+    {% csrf_token %}
+        <input name="item_id" type="hidden" value="{{ item.pk }}" />
+        <input name="amount" type="number"
+               value="1" min="1"
+               class="amount" />
+        <input type="submit" value="В корзину" />
+    </form>

@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),
     path('cart/', include('cart.urls')),
-    path('', catalog_views.item_list),
+    path('order/', include('orders.urls')),
+    path('', catalog_views.ItemListView.as_view()),
 ]

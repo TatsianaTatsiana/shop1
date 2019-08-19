@@ -8,7 +8,7 @@ class ItemSortForm(forms.Form):
         ('price', 'Price'),
         ('-price', 'Price (high to low)'),
         ('count', 'count'),
-    ], label='Order')
+    ], label='Order', required=False)
 
 
 class ItemFilterForm(forms.Form):

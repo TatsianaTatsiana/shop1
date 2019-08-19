@@ -8,6 +8,9 @@ class Item(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     count = models.PositiveIntegerField()
 
+    def __str__(self):
+        return "Item #{} {}, price {}".format(self.pk, self.name, self.price)
+
 
 class ItemAmount(models.Model):
     class Meta:

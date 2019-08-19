@@ -11,10 +11,10 @@
     }
 </style>
 <div class="item">
-    <p>Name: {{ item.name }}</p>
-    <p>Price: {{ item.price }}</p>
+    <p>Name: {{ object.name }}</p>
+    <p>Price: {{ object.price }}</p>
     <p>Presence:
-        {% if item.count > 0 %}
+        {% if object.count > 0 %}
         In Stock
         {% else %}
         Out of stock

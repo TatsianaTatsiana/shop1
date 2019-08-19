@@ -19,7 +19,10 @@
     }
 </style>
 <body>
-<a href="{% url 'item_list' %}"><div class="head">Main Title</div></a>
+<div class="head">
+    <a href="{% url 'item_list' %}"> Main Title</a>
+    <a href="{% url 'cart_view' %}"> Корзина </a>
+        </div>
 {% block content %}
 {% endblock %}
 </body>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Items</title>
+</head>
+<body>
+<a href="{% url 'get_cart' pk=cart.pk %}"><div class="head">Main Title</div></a>
+{% block content %}
+{% endblock %}
+</body>
+</html>

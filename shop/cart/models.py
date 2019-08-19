@@ -11,14 +11,6 @@ class CartItem(ItemAmount):
                              related_name='items')
 
 
-
-
-
-
-
-
-
-
 class Cart(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
                                 null=True, default=None,
@@ -27,4 +19,11 @@ class Cart(models.Model):
     @property
     def total_price(self):
         return sum(item.total_price
-                   for item in self.items)
+                   for item in self.items.all())
+
+    def __str__(self):
+        username = (
+            self.user.username if self.user is not None
+        else '- Unknown -'
+        )
+        return "Cart #{} for user {}".format(self.id, self.user.username)
